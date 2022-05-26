@@ -34,7 +34,7 @@ public class DataCSVOutput {
             writer = new FileWriter(FILENAME);
             writer.write("lvalue,xvalue\n");
         } catch (IOException e) {
-
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
@@ -53,11 +53,5 @@ public class DataCSVOutput {
         } catch (IOException e) {
             Main.print("You should never see this: " + e.getMessage());
         }
-    }
-
-    public String currentTimeISO() {
-        LocalDateTime current = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
-        return formatter.format(current);
     }
 }
