@@ -41,7 +41,7 @@ public abstract class SimLoop {
     }
 
     protected void render() {
-        String out = Double.toString(controller.getX());
+        String out = controller.getL() + " " + controller.getX();
         dataout.writeToFile(controller.getL()+","+ controller.getX()+"\n");
 
         outputFN(out);
