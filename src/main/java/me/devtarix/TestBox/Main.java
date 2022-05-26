@@ -6,7 +6,7 @@ public class Main {
         try {
             FrameBasedSimLoop frameBasedSimLoop = new FrameBasedSimLoop();
             frameBasedSimLoop.run();
-            Thread.sleep(SECONDSTORUN * 1000);
+            Thread.sleep(SECONDSTORUN * Settings.MS);
             frameBasedSimLoop.stop();
         } catch(Exception ex) {
             print(ex.getMessage());
